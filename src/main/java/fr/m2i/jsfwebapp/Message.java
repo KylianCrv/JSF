@@ -2,7 +2,7 @@ package fr.m2i.jsfwebapp;
 
 import javax.faces.bean.ManagedBean;
 
-@ManagedBean(name = "message", eager = true)
+@ManagedBean(name = "messageBean", eager = true)
 public class Message {
 
     private String message;

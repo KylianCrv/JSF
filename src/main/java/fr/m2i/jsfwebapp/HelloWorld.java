@@ -6,7 +6,7 @@ import javax.faces.bean.ManagedProperty;
 @ManagedBean(name = "helloWorld", eager = true)
 public class HelloWorld {
 
-    @ManagedProperty(value = "#{message}")
+    @ManagedProperty(value = "#{messageBean}")
     private Message messageBean;
 
     private String message;
