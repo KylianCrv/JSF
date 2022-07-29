@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html" >
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
         <title>2ème page</title>
     </h:head>
     <h:body>
-        <h1>Je suis sur la 2ème page</h1>
-        <hr />
 
-        <h3>Aller vers la page home</h3>
-        <h:form>
-            <h:commandButton action="home" value="retour home page"/>
-        </h:form>
+        <ui:composition template="templates/common.xhtml">
+
+            <ui:define name="header">
+                <h1>Je suis sur la page 2 </h1>
+            </ui:define>
+
+            <ui:define name="content">
+                <h3>Le contenu de ma page 2 </h3>
+
+                <hr />
+                <h:form>
+                    <h:commandButton action="home?faces-redirect=true" value="Page d'accueil"/>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
     </h:body>
 </html>
