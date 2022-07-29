@@ -7,5 +7,11 @@
     </h:head>
     <h:body>
         <h1>#{helloWorld.message}</h1>
+        <hr />
+
+        <h3>Redirect</h3>
+        <h:form>
+            <h:commandButton action="home?faces-redirect=true" value="Redirect sur la page home"/>
+        </h:form>
     </h:body>
 </html>
