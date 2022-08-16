@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Signup Adherent</title>
+    </h:head>
+    <h:body>
+        <fieldset>
+            <legend>Inscription : </legend>
+            <h:form>
+                <table>
+                    <tr>
+                        <td>Nom : </td>
+                        <td><h:inputText value="#{adherentData.nom}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Prénom : </td>
+                        <td><h:inputText value="#{adherentData.prenom}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Date de naissance : </td>
+                        <td><h:inputText value="#{adherentData.dateDeNaissance}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Ville : </td>
+                        <td><h:inputText value="#{adherentData.ville}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Loisir : </td>
+                        <td><h:selectOneMenu  value="#{adherentData.loisir}">
+                                <f:selectItem itemValue="Foot"/>
+                                <f:selectItem itemValue="Basket"/>
+                                <f:selectItem itemValue="Cuisine"/>
+                                <f:selectItem itemValue="Lecture"/>
+
+                            </h:selectOneMenu></td>
+                    </tr>
+                    <tr>
+                        <td>Sexe : </td>
+                        <td><h:selectOneRadio value="#{adherentData.genre}">
+                                <f:selectItem itemValue="Homme"/>
+                                <f:selectItem itemValue="Femme"/>
+
+                            </h:selectOneRadio></td>
+                    </tr>
+
+                    <tr>
+                        <td><h:commandButton action="showListAdherent" value=" Retour"/></td>
+                        <td><h:commandButton value="Valider" action="showAdherent"/></td>
+                        <td></td>
+
+                    </tr>
+                </table>
+            </h:form>
+        </fieldset>
+    </h:body>
+</html>

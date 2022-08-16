@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Signup Adherent</title>
+    </h:head>
+    <h:body>
+        <fieldset>
+            <legend>Inscription : </legend>
+            <h:form>
+                <table>
+                    <tr>
+                        <td>Nom : </td>
+                        <td>#{adherentData.nom}</td>
+                    </tr>
+                    <tr>
+                        <td>Prénom : </td>
+                        <td>#{adherentData.prenom}</td>
+                    </tr>
+                    <tr>
+                        <td>Date de naissance : </td>
+                        <td>#{adherentData.dateDeNaissance}</td>
+                    </tr>
+                    <tr>
+                        <td>Ville : </td>
+                        <td>#{adherentData.ville}</td>
+                    </tr>
+                    <tr>
+                        <td>Loisir : </td>
+                        <td>#{adherentData.loisir}</td>
+                    </tr>
+                    <tr>
+                        <td>Sexe : </td>
+                        <td>#{adherentData.genre}</td>
+                    </tr>
+
+                    <tr>
+                        <td><h:commandButton action="showListAdherent" value=" Retour"/></td>
+                        <td><h:commandButton value="Valider" action="#{adherentData.addAdherent()}"/></td>
+                        <td></td>
+
+                    </tr>
+                </table>
+            </h:form>
+        </fieldset>
+    </h:body>
+</html>
