@@ -1,9 +1,8 @@
 package fr.m2i.jsfwebapp;
 
-import java.text.DateFormat;
-
 public class Adherent {
 
+    private int id;
     private String nom;
     private String prenom;
     private String dateDeNaissance;
@@ -14,13 +13,22 @@ public class Adherent {
     public Adherent() {
     }
 
-    public Adherent(String nom, String prenom, String dateDeNaissance, String ville, String loisir, String genre) {
+    public Adherent(int id, String nom, String prenom, String dateDeNaissance, String ville, String loisir, String genre) {
+        this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.dateDeNaissance = dateDeNaissance;
         this.ville = ville;
         this.loisir = loisir;
         this.genre = genre;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNom() {

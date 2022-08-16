@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html" >
+    <h:head>
+        <title>Inscription au club</title>
+    </h:head>
+
+    <h:body>
+        <h:form>
+
+            <fieldset>
+                <legend>Inscription</legend>
+                <h:panelGrid columns="2">
+
+                    <h:outputLabel value="Nom" />
+                    <h:outputLabel value="#{adherentData.adherent.nom}" />
+
+                    <h:outputLabel value="Prénom" />
+                    <h:outputLabel value="#{adherentData.adherent.prenom}" />
+
+                    <h:outputLabel value="Date de naissance" />
+                    <h:outputLabel value="#{adherentData.adherent.dateDeNaissance}" />
+
+                    <h:outputLabel value="Ville" />
+                    <h:outputLabel value="#{adherentData.adherent.ville}"/>
+
+
+                    <h:outputLabel value="Loisirs" />
+                    <h:outputLabel value="#{adherentData.adherent.loisir}"/>
+
+
+                    <h:outputLabel value="Genre" />
+                    <h:outputLabel value="#{adherentData.adherent.genre}"/>
+
+
+                    <h:commandButton action="#{adherentData.onSave()}" value="Valider" />
+                    <h:commandButton action="signup?faces-redirect=true" value="Corriger" />
+                </h:panelGrid>
+            </fieldset>
+
+        </h:form>
+
+    </h:body>
+</html>
