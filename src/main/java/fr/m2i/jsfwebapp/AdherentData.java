@@ -27,6 +27,11 @@ public class AdherentData {
         return "listAdherent?faces-redirect=true";
     }
 
+    public String onDelete() {
+        adherents.remove(this.adherent.getId());
+        return "listAdherent?faces-redirect=true";
+    }
+
     public List<Adherent> getAdherents() {
         return adherents;
     }

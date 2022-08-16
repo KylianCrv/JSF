@@ -42,6 +42,14 @@
                     <h:outputText value="#{a.genre}" />
                 </h:column>
 
+                <h:column>
+                    <h:commandButton action="editAdherent?faces-redirect=true" value="Modifier" />
+                </h:column>
+
+                <h:column>
+                    <h:commandButton action="#{adherentData.onDelete()}" value="Supprimer" />
+                </h:column>
+
             </h:dataTable>
 
             <h3>Ajouter un adhérent</h3>
