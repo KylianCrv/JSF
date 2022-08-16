@@ -24,7 +24,7 @@ public class AdherentData {
     public String onSave() {
         adherents.add(adherent);
         adherent = new Adherent();
-        return "listAdherent";
+        return "listAdherent?faces-redirect=true";
     }
 
     public List<Adherent> getAdherents() {
