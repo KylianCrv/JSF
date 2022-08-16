@@ -4,17 +4,18 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html" >
     <h:head>
-        <title>Modifier un adhérent</title>
+        <title>Inscription au club</title>
     </h:head>
 
     <h:body>
         <h:form>
+
             <fieldset>
-                <legend>Modification adhérent :</legend>
+                <legend>Mise à jour</legend>
                 <h:panelGrid columns="2">
 
                     <h:outputLabel value="Nom" />
-                    <h:inputText  value="#{adherentData.adherent.nom}" />
+                    <h:inputText value="#{adherentData.adherent.nom}" />
 
                     <h:outputLabel value="Prénom" />
                     <h:inputText value="#{adherentData.adherent.prenom}" />
@@ -45,10 +46,10 @@
                         <f:selectItem itemLabel="Homme" itemValue="Homme" />
                     </h:selectOneRadio>
 
-                    <h:commandButton action="#{adherentData.goToValidate}" value="Valider" />
-                    <h:commandButton action="listAdherent" value="Annuler" />
+                    <h:commandButton action="#{adherentData.onUpdate}" value="Modifier" />
                 </h:panelGrid>
             </fieldset>
+
         </h:form>
 
     </h:body>

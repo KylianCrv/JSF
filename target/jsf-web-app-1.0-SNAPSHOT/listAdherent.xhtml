@@ -13,6 +13,11 @@
             <h:dataTable value="#{adherentData.adherents}" var="a">
 
                 <h:column>
+                    <f:facet name="header">Id</f:facet>
+                    <h:outputText value="#{a.id}" />
+                </h:column>
+
+                <h:column>
                     <f:facet name="header">Nom</f:facet>
                     <h:outputText value="#{a.nom}" />
                 </h:column>
@@ -43,11 +48,13 @@
                 </h:column>
 
                 <h:column>
-                    <h:commandButton action="editAdherent?faces-redirect=true" value="Modifier" />
+                    <f:facet name="header">Modifier</f:facet>
+                    <h:commandButton action="#{adherentData.onSelect(a.id)}" value="Modifier"/>
                 </h:column>
 
                 <h:column>
-                    <h:commandButton action="#{adherentData.onDelete()}" value="Supprimer" />
+                    <f:facet name="header">Supprimer</f:facet>
+                    <h:commandButton action="#{adherentData.onDelete(a.id)}" value="Supprimer"/>
                 </h:column>
 
             </h:dataTable>
